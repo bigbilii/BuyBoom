@@ -10,9 +10,11 @@
 
 		<script src="https://use.fontawesome.com/9640d6b71e.js"></script>
 		<link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-
+		<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
 		<link rel="stylesheet" type="text/css" href="css/style.css" />
 		<script src="js/move-top.js" type="text/javascript" charset="utf-8"></script>
+		<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script src="js/infoCheck.js" type="text/javascript" charset="utf-8"></script>
 	</head>
 
 	<body>
@@ -254,7 +256,7 @@
 		<!--banner-->
 		<div class="banner-top">
 			<div class="area">
-				<h3>Login</h3>
+				<h3>登陆</h3>
 				<h4><a href="index.html">Home</a><label>/</label>Login</h4>
 				<div class="clearfix"> </div>
 			</div>
@@ -266,23 +268,23 @@
 				<div class="panel-login">
 					<div class="form-login">
 						<h3>Login</h3>
-						<form action="#" method="post">
+						<form action="#">
 							<div class="key">
 								<i class="fa fa-envelope" aria-hidden="true"></i>
-								<input type="text" value="Email" name="Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}" required="">
+								<input type="text" value="Email" name="Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}" required="" id="email">
 								<div class="clearfix"></div>
 							</div>
 							<div class="key">
 								<i class="fa fa-lock" aria-hidden="true"></i>
-								<input type="password" value="Password" name="Password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}" required="">
+								<input type="password" value="Password" name="Password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}" required="" id="password">
 								<div class="clearfix"></div>
 							</div>
-							<input type="submit" value="Login">
+							<input type="submit" value="确定" onclick="checkLogin()">
 						</form>
 					</div>
 					<div class="forg">
-						<a href="#" class="forg-left">Forgot Password</a>
-						<a href="register.html" class="forg-right">Register</a>
+						<a href="#" class="forg-left">忘记密码</a>
+						<a href="register.html" class="forg-right">注册</a>
 						<div class="clearfix"></div>
 					</div>
 				</div>
@@ -421,8 +423,5 @@
 		});
 	</script>
 	<a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
-
-	<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
-	<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 </html>
