@@ -256,160 +256,172 @@
 		<!--banner-->
 		<div class="banner-top">
 			<div class="area">
-				<h3>购物车</h3>
-				<h4><a href="index.html">Home</a><label>/</label>cart</h4>
+				<h3>订单</h3>
+				<h4><a href="index.html">Home</a><label>/</label>order</h4>
 				<div class="clearfix"> </div>
 			</div>
 		</div>
 
 		<!--内容-->
-		<!-- contact -->
-		<div class="check-out">
+
+		<div class="order">
 			<div class="area">
-				<div class="title">
-					<h3>购物车</h3>
-					<div class="line">
-						<b></b>
-						<b class="s"></b>
+				<div class="option">
+					<div class="title">
+						<h4>收货地址</h4>
 					</div>
-				</div>
-				<table class="table">
-					<tr>
-						<th class="t-head head-it ">商品</th>
-						<th class="t-head">价格</th>
-						<th class="t-head">数量</th>
-						<th class="t-head">小计($)</th>
-					</tr>
-					<tr>
-						<td class="ring-in t-data">
-							<a href="product_info.html" class="at-in">
-								<img src="images/wi.png" class="img-responsive" alt="">
-							</a>
-							<div class="sed">
-								<h5>吃的1</h5>
-							</div>
-							<div class="clearfix"> </div>
-							<div class="close">
-								<i class="fa fa-times" aria-hidden="true"></i>
-							</div>
-						</td>
-						<td class="t-data ">$<span class="price">10.00</span></td>
-						<td class="t-data">
-							<div class="quantity">
-								<div class="quantity-select">
-									<div class="entry value-minus">&nbsp;</div>
-									<div class="entry value"><span class="span-1">1</span></div>
-									<div class="entry value-plus active">&nbsp;</div>
-								</div>
-							</div>
-						</td>
-						<td class="t-data pn">$<span class="tprice">10.00</span></td>
-					</tr>
-					<tr>
-						<td class="t-data ring-in">
-							<a href="product_info.html" class="at-in"><img src="images/wi1.png" class="img-responsive" alt=""></a>
-							<div class="sed">
-								<h5>吃的2</h5>
-							</div>
-							<div class="clearfix"> </div>
-							<div class="close"> <i class="fa fa-times" aria-hidden="true"></i></div>
-						</td>
-						<td class="t-data ">$<span class="price">20.00</span></td>
-						<td class="t-data">
-							<div class="quantity">
-								<div class="quantity-select">
-									<div class="entry value-minus">&nbsp;</div>
-									<div class="entry value"><span class="span-1">1</span></div>
-									<div class="entry value-plus active">&nbsp;</div>
-								</div>
-							</div>
-						</td>
-						<td class="t-data pn">$<span class="tprice">20.00</span></td>
-					</tr>
-					<tr>
-						<td class="t-data ring-in">
-							<a href="product_info.html" class="at-in"><img src="images/wi2.png" class="img-responsive" alt=""></a>
-							<div class="sed">
-								<h5>吃的3</h5>
-							</div>
-							<div class="clearfix"> </div>
-							<div class="close"> <i class="fa fa-times" aria-hidden="true"></i></div>
-						</td>
-						<td class="t-data ">$<span class="price">15.50</span></td>
-						<td class="t-data">
-							<div class="quantity">
-								<div class="quantity-select">
-									<div class="entry value-minus">&nbsp;</div>
-									<div class="entry value"><span class="span-1">1</span></div>
-									<div class="entry value-plus active">&nbsp;</div>
-								</div>
-							</div>
-						</td>
-						<td class="t-data pn">$<span class="tprice">15.50</span></td>
-					</tr>
-				</table>
+					<form>
+						<div class="form-group" style="width: 40%;">
+							<label for="exampleInputEmail1">收件人</label>
+							<input type="name" class="form-control" placeholder="name">
+						</div>
+						<div class="form-group" style="width: 40%;">
+							<label for="exampleInputPassword1">电话</label>
+							<input type="phone" class="form-control" placeholder="phone">
+						</div>
+						<div class="form-group" style="width: 80%;">
+							<label for="exampleInputPassword1">详细地址</label>
+							<input type="address" class="form-control" placeholder="address">
+						</div>
+					</form>
 
-				<div class="total">
-					<span class="pt">总金额</span><span class="pn">$<span class="total-price">45.50</span></span>
+				</div>
+				<div class="option">
+					<div class="title">
+						<h4>支付方式</h4>
+					</div>
+
+					<div class="radio">
+						<label class="radio-inline">
+					    	<input type="radio" name="paytype" id="optionsRadios1" value="option1" checked>
+					    		在线支付
+					  	</label>
+					</div>
+					<div class="radio">
+						<label class="radio-inline">
+					    	<input type="radio" name="paytype" id="optionsRadios2" value="option2">
+					    	货到付款
+					  </label>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+				<div class="option">
+					<div class="title">
+						<h4>配送方式</h4>
+					</div>
+					<div class="radio">
+						<label>
+					    	<input type="radio" name="send" id="optionsRadios1" value="option1">
+					    	快递配送（免运费）
+					  </label>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+				<div class="option">
+					<div class="title">
+						<h4>送货时间</h4>
+					</div>
+					<div class="radio">
+						<label>
+					    	<input type="radio" name="time" id="optionsRadios1" value="option1">
+					    	工作日送货<span>周一至周五</span>
+					  </label>
+					</div>
+					<div class="radio">
+						<label>
+					    	<input type="radio" name="time" id="optionsRadios2" value="option2">
+					    	双休日、节假日送货<span>周六至周日</span>
+					  </label>
+					</div>
+					<div class="radio">
+						<label>
+					    	<input type="radio" name="time" id="optionsRadios3" value="option3">
+					    	不限送货时间<span>周一至周日</span>
+					  </label>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+
+				<div class="option">
+					<div class="title">
+						<h4>订单详情</h4>
+					</div>
+					<table class="table">
+						<tr>
+							<th class="t-head head-it ">商品</th>
+							<th class="t-head">价格</th>
+							<th class="t-head">数量</th>
+							<th class="t-head">小计($)</th>
+						</tr>
+						<tr>
+							<td class="ring-in t-data">
+								<a href="product_info.html" class="at-in">
+									<img src="images/wi.png" class="img-responsive" alt="">
+								</a>
+								<div class="sed">
+									<h5>吃的1</h5>
+								</div>
+								<div class="clearfix"> </div>
+							</td>
+							<td class="t-data ">$<span class="price">10.00</span></td>
+							<td class="t-data">
+								<div class="quantity">
+									<div class="quantity-select">
+										<div class="entry value"><span class="span-1">1</span></div>
+									</div>
+								</div>
+							</td>
+							<td class="t-data pn">$<span class="tprice">10.00</span></td>
+						</tr>
+						<tr>
+							<td class="t-data ring-in">
+								<a href="product_info.html" class="at-in"><img src="images/wi1.png" class="img-responsive" alt=""></a>
+								<div class="sed">
+									<h5>吃的2</h5>
+								</div>
+								<div class="clearfix"> </div>
+
+							</td>
+							<td class="t-data ">$<span class="price">20.00</span></td>
+							<td class="t-data">
+								<div class="quantity">
+									<div class="quantity-select">
+										<div class="entry value"><span class="span-1">1</span></div>
+									</div>
+								</div>
+							</td>
+							<td class="t-data pn">$<span class="tprice">20.00</span></td>
+						</tr>
+						<tr>
+							<td class="t-data ring-in">
+								<a href="product_info.html" class="at-in"><img src="images/wi2.png" class="img-responsive" alt=""></a>
+								<div class="sed">
+									<h5>吃的3</h5>
+								</div>
+								<div class="clearfix"> </div>
+
+							</td>
+							<td class="t-data ">$<span class="price">15.50</span></td>
+							<td class="t-data">
+								<div class="quantity">
+									<div class="quantity-select">
+										<div class="entry value"><span class="span-1">1</span></div>
+									</div>
+								</div>
+							</td>
+							<td class="t-data pn">$<span class="tprice">15.50</span></td>
+						</tr>
+					</table>
+
+					<div class="total">
+						<span class="pt">总金额</span><span class="pn">$<span class="total-price">45.00</span></span>
+						<div class="clearfix"> </div>
+						<button class="btn btn-danger" onclick="{location.href='success.html'}">确定提交</button>
+					</div>
 					<div class="clearfix"> </div>
-					<button class="btn btn-danger" onclick="{location.href='order.html'}">前去购买</button>
 				</div>
-				<div class="clearfix"> </div>
-
 			</div>
 		</div>
-
-		<!--jq-->
-		<script>
-			$('.value-plus').on('click', function() {
-				var price = $(this).parent().parent().parent().parent().find('.price');
-				
-				var tprice = $(this).parent().parent().parent().parent().find('.tprice'),
-					newTprice = parseFloat(price.text(), 10) + parseFloat(tprice.text(), 10);
-					
-				var total = $(".total-price"),
-					newTotal = parseFloat(price.text(), 10) + parseFloat(total.text(), 10);
-					
-				var divUpd = $(this).parent().find('.value'),
-					newVal = parseInt(divUpd.text(), 10) + 1;
-					
-				divUpd.text(newVal);
-				total.text(newTotal);
-				tprice.text(newTprice);
-			});
-
-			$('.value-minus').on('click', function() {
-				var price = $(this).parent().parent().parent().parent().find('.price');
-				
-				var tprice = $(this).parent().parent().parent().parent().find('.tprice'),
-					newTprice = parseFloat(tprice.text(), 10) - parseFloat(price.text(), 10);
-					
-				var total = $(".total-price"),
-					newTotal = parseFloat(total.text(), 10) - parseFloat(price.text(), 10);
-					
-				var divUpd = $(this).parent().find('.value'),
-					newVal = parseInt(divUpd.text(), 10) - 1;
-					
-				if(newVal >= 1) {
-					divUpd.text(newVal);
-					total.text(newTotal);
-					tprice.text(newTprice);
-				}
-
-			});
-
-			$('.close').on('click', function() {
-				var div = $(this).parent().parent();
-				var price = div.find('.price');
-				var num = div.find('.value');
-				var total = $(".total-price");
-
-				var newTotal = parseFloat(total.text(), 10) - (parseFloat(price.text(), 10) * parseFloat(num.text(), 10));
-				total.text(newTotal);
-				div.remove();
-			});
-		</script>
-		<!--jq-->
 
 		<!--footer-->
 		<div class="footer">

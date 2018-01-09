@@ -241,7 +241,7 @@
 									<button type="submit" class="btn btn-default"><i class="fa fa-search" aria-hidden="true"></i></button>
 								</form>
 								<li>
-									<a href="#"><i class="fa fa-shopping-cart my-cart-icon fa-2x" style="color: #FAB005;"></i><span class="badge" style="background: #039445;">2</span>
+									<a href="cart.html"><i class="fa fa-shopping-cart my-cart-icon fa-2x" style="color: #FAB005;"></i><span class="badge" style="background: #039445;">2</span>
 									</a>
 								</li>
 
@@ -271,22 +271,22 @@
 						<form action="index.html">
 							<div class="key" id="username">
 								<i class="fa fa-user" aria-hidden="true"></i>
-								<input type="text" name="Username" onfocus="editNmae()" onblur="confirmName(this.value)" required="" id="username-value">
+								<input type="text" name="Username" onfocus="editNmae()" onblur="confirmName(this.value)" required="" id="username-value" placeholder="用户名">
 								<div class="clearfix"></div>
 							</div>
 							<div class="key" id="email">
 								<i class="fa fa-envelope" aria-hidden="true"></i>
-								<input type="text" name="Email" onfocus="editEmail()" onblur="confirmEmail(this.value)" required="" id="email-value">
+								<input type="text" name="Email" onfocus="editEmail()" onblur="confirmEmail(this.value)" required="" id="email-value" placeholder="电子邮箱">
 								<div class="clearfix"></div>
 							</div>
 							<div class="key" id="password">
 								<i class="fa fa-lock" aria-hidden="true"></i>
-								<input type="password" name="Password" onfocus="editPassword()" onblur="confirmPassword(this.value)" required="" id="password-value">
+								<input type="password" name="Password" onfocus="editPassword()" onblur="confirmPassword(this.value)" required="" id="password-value" placeholder="新密码">
 								<div class="clearfix"></div>
 							</div>
 							<div class="key" id="conpassword">
 								<i class="fa fa-lock" aria-hidden="true"></i>
-								<input type="password" name="Confirm Password" onfocus="editConpassword()" onblur="confirmConPassword(this.value)" required="" id="conpassword-value">
+								<input type="password" name="Confirm Password" onfocus="editConpassword()" onblur="confirmConPassword(this.value)" required="" id="conpassword-value" placeholder="再次输入密码 ">
 								<div class="clearfix"></div>
 							</div>
 							<input type="submit" value="确定" onclick="checkRegister()">
