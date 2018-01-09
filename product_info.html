@@ -14,8 +14,7 @@
 		<link rel="stylesheet" type="text/css" href="css/style.css" />
 		<script src="js/move-top.js" type="text/javascript" charset="utf-8"></script>
 		<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-		<link rel="stylesheet" type="text/css" href="css/checkout-cornerflat.css" />
-
+		<script src="js/infoCheck.js" type="text/javascript" charset="utf-8"></script>
 	</head>
 
 	<body>
@@ -242,7 +241,7 @@
 									<button type="submit" class="btn btn-default"><i class="fa fa-search" aria-hidden="true"></i></button>
 								</form>
 								<li>
-									<a href="cart.html"><i class="fa fa-shopping-cart my-cart-icon fa-2x" style="color: #FAB005;"></i><span class="badge" style="background: #039445;">2</span>
+									<a href="#"><i class="fa fa-shopping-cart my-cart-icon fa-2x" style="color: #FAB005;"></i><span class="badge" style="background: #039445;">2</span>
 									</a>
 								</li>
 
@@ -255,56 +254,75 @@
 		</div>
 
 		<!--banner-->
-		<div class="banner">
-			<div id="myCarousel" class="carousel slide" data-ride="carousel">
-				<!-- Indicators -->
-				<ol class="carousel-indicators">
-					<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-					<li data-target="#myCarousel" data-slide-to="1"></li>
-					<li data-target="#myCarousel" data-slide-to="2"></li>
-				</ol>
-				<div class="carousel-inner" role="listbox">
-					<div class="item active">
-						<a href="kitchen.html"> <img class="first-slide" src="images/ba.jpg" alt="First slide"></a>
-					</div>
-					<div class="item">
-						<a href="care.html"> <img class="second-slide " src="images/ba1.jpg" alt="Second slide"></a>
-					</div>
-					<div class="item">
-						<a href="hold.html"><img class="third-slide " src="images/ba2.jpg" alt="Third slide"></a>
-					</div>
-				</div>
-
+		<div class="banner-top">
+			<div class="area">
+				<h3>Wheat</h3>
+				<h4><a href="index.html">Home</a><label>/</label>Wheat</h4>
+				<div class="clearfix"> </div>
 			</div>
 		</div>
 
-		<!--内容-->
 		<div class="content">
 			<div class="area">
-				<!--推荐-->
-				<div class="top">
-					<div class="title">
-						<h3>今日特卖</h3>
-						<div class="line">
-							<b></b>
-							<b class="s"></b>
+				<div class="top-product">
+					<div class="col-md-5">
+						<div class="pic-product">
+							<div id="picture-frame">
+								<img src="images/si.jpg" data-src="images/si-1.jpg" alt="" class="img-responsive" />
+							</div>
+							<script src="js/jquery.zoomtoo.js"></script>
+							<script>
+								$(function() {
+									$("#picture-frame").zoomToo({
+										magnify: 1
+									});
+								});
+							</script>
+
 						</div>
 					</div>
+					<div class="col-md-7 ">
+						<div class="text-product">
+							<h3>Wheat</h3>
+							<div class="price-product">
+								<p class="reduced "><del>$10.00</del>$5.00</p>
+							</div>
+							<p class="info-product"> Aashirvaad Atta with Multigrains是由来自印度各地的谷物精选而成，让您在美味的旋转中享受多种谷物的健康美味。
+								</br>Aashirvaad Atta with Multigrains为您提供六种不同谷物的健康美味：小麦，大豆，channa，燕麦，玉米和洋车前子壳。这些成分为您的饮食注入蛋白质，维生素，矿物质和纤维。所以你和你的家人每天都保持积极，健康和精力充沛。
+								</br>而最重要的是，它仍然保留着Aashirvaad Atta同样的美味！</p>
+							<ul class="social-top">
+								<li>
+									<a href="#" class="icon facebook"><i class="fa fa-weibo" aria-hidden="true"></i><span></span></a>
+								</li>
+								<li>
+									<a href="#" class="icon twitter"><i class="fa fa-twitter" aria-hidden="true"></i><span></span></a>
+								</li>
+								<li>
+									<a href="#" class="icon pinterest"><i class="fa fa-weixin" aria-hidden="true"></i><span></span></a>
+								</li>
+								<li>
+									<a href="#" class="icon dribbble"><i class="fa fa-dribbble" aria-hidden="true"></i><span></span></a>
+								</li>
+							</ul>
 
+							<div class="add">
+								<button class="btn btn-danger my-cart-btn my-cart-b" data-id="1" data-name="Wheat" data-summary="summary 1" data-price="6.00" data-quantity="1" data-image="images/si.jpg">加入购物车</button>
+							</div>
+							<div class="clearfix"> </div>
+						</div>
+					</div>
+					<div class="clearfix"> </div>
+				</div>
+
+				<div class="ad">
 					<div class="top-nav">
 						<nav class="nav-sidebar">
 							<ul class="nav tabs ">
 								<li class="active">
-									<a href="#tab1" data-toggle="tab">杂物</a>
+									<a href="#tab1" data-toggle="tab">特别推荐</a>
 								</li>
 								<li class="">
-									<a href="#tab2" data-toggle="tab">零食</a>
-								</li>
-								<li class="">
-									<a href="#tab3" data-toggle="tab">水果 & 蔬菜</a>
-								</li>
-								<li class="">
-									<a href="#tab4" data-toggle="tab">早餐 & 谷类</a>
+									<a href="#tab2" data-toggle="tab">买了该商品的用户还买了</a>
 								</li>
 							</ul>
 						</nav>
@@ -313,7 +331,7 @@
 								<div class=" con-w3l">
 									<div class="col-md-3 m-wthree">
 										<div class="col-m">
-											<a href="#" data-toggle="modal" data-target="#myModal1" class="offer-img">
+											<a href="product_info.html" class="offer-img">
 												<img src="images/of.png" class="img-responsive" alt="">
 
 											</a>
@@ -326,7 +344,7 @@
 
 												</div>
 												<div class="add">
-													<button class="btn btn-danger my-cart-btn my-cart-b " data-id="1" data-name="Moong" data-summary="summary 1" data-price="1.50" data-quantity="1" data-image="images/of.png">加入购物车</button>
+													<button class="btn btn-danger" onclick="{location.href='product_info.html'}">查看详情</button>
 												</div>
 
 											</div>
@@ -334,7 +352,7 @@
 									</div>
 									<div class="col-md-3 m-wthree">
 										<div class="col-m">
-											<a href="#" data-toggle="modal" data-target="#myModal2" class="offer-img">
+											<a href="product_info.html" class="offer-img">
 												<img src="images/of1.png" class="img-responsive" alt="">
 
 											</a>
@@ -347,14 +365,14 @@
 
 												</div>
 												<div class="add">
-													<button class="btn btn-danger my-cart-btn my-cart-b" data-id="2" data-name="Sunflower Oil" data-summary="summary 2" data-price="9.00" data-quantity="1" data-image="images/of1.png">加入购物车</button>
+													<button class="btn btn-danger" onclick="{location.href='product_info.html'}">查看详情</button>
 												</div>
 											</div>
 										</div>
 									</div>
 									<div class="col-md-3 m-wthree">
 										<div class="col-m">
-											<a href="#" data-toggle="modal" data-target="#myModal3" class="offer-img">
+											<a href="product_info.html" class="offer-img">
 												<img src="images/of2.png" class="img-responsive" alt="">
 
 											</a>
@@ -367,14 +385,14 @@
 
 												</div>
 												<div class="add">
-													<button class="btn btn-danger my-cart-btn my-cart-b" data-id="3" data-name="Kabuli Chana" data-summary="summary 3" data-price="2.00" data-quantity="1" data-image="images/of2.png">加入购物车</button>
+													<button class="btn btn-danger" onclick="{location.href='product_info.html'}">查看详情</button>
 												</div>
 											</div>
 										</div>
 									</div>
 									<div class="col-md-3 m-wthree">
 										<div class="col-m">
-											<a href="#" data-toggle="modal" data-target="#myModal4" class="offer-img">
+											<a href="product_info.html" class="offer-img">
 												<img src="images/of3.png" class="img-responsive" alt="">
 
 											</a>
@@ -387,7 +405,7 @@
 
 												</div>
 												<div class="add">
-													<button class="btn btn-danger my-cart-btn my-cart-b" data-id="4" data-name="Soya Chunks" data-summary="summary 4" data-price="3.50" data-quantity="1" data-image="images/of3.png">加入购物车</button>
+													<button class="btn btn-danger" onclick="{location.href='product_info.html'}">查看详情</button>
 												</div>
 											</div>
 										</div>
@@ -399,7 +417,7 @@
 								<div class=" con-w3l">
 									<div class="col-md-3 m-wthree">
 										<div class="col-m">
-											<a href="#" data-toggle="modal" data-target="#myModal5" class="offer-img">
+											<a href="product_info.html" class="offer-img">
 												<img src="images/of4.png" class="img-responsive" alt="">
 
 											</a>
@@ -412,14 +430,14 @@
 
 												</div>
 												<div class="add">
-													<button class="btn btn-danger my-cart-btn my-cart-b" data-id="5" data-name="Lays" data-summary="summary 5" data-price="0.70" data-quantity="1" data-image="images/of4.png">加入购物车</button>
+													<button class="btn btn-danger" onclick="{location.href='product_info.html'}">查看详情</button>
 												</div>
 											</div>
 										</div>
 									</div>
 									<div class="col-md-3 m-wthree">
 										<div class="col-m">
-											<a href="#" data-toggle="modal" data-target="#myModal6" class="offer-img">
+											<a href="product_info.html" class="offer-img">
 												<img src="images/of5.png" class="img-responsive" alt="">
 
 											</a>
@@ -432,14 +450,14 @@
 
 												</div>
 												<div class="add">
-													<button class="btn btn-danger my-cart-btn my-cart-b" data-id="6" data-name="Kurkure" data-summary="summary 6" data-price="0.70" data-quantity="1" data-image="images/of5.png">加入购物车</button>
+													<button class="btn btn-danger" onclick="{location.href='product_info.html'}">查看详情</button>
 												</div>
 											</div>
 										</div>
 									</div>
 									<div class="col-md-3 m-wthree">
 										<div class="col-m">
-											<a href="#" data-toggle="modal" data-target="#myModal7" class="offer-img">
+											<a href="product_info.html" class="offer-img">
 												<img src="images/of6.png" class="img-responsive" alt="">
 
 											</a>
@@ -452,14 +470,14 @@
 
 												</div>
 												<div class="add">
-													<button class="btn btn-danger my-cart-btn my-cart-b" data-id="7" data-name="Popcorn" data-summary="summary 7" data-price="1.00" data-quantity="1" data-image="images/of6.png">加入购物车</button>
+													<button class="btn btn-danger" onclick="{location.href='product_info.html'}">查看详情</button>
 												</div>
 											</div>
 										</div>
 									</div>
 									<div class="col-md-3 m-wthree">
 										<div class="col-m">
-											<a href="#" data-toggle="modal" data-target="#myModal8" class="offer-img">
+											<a href="product_info.html" class="offer-img">
 												<img src="images/of7.png" class="img-responsive" alt="">
 
 											</a>
@@ -472,177 +490,7 @@
 
 												</div>
 												<div class="add">
-													<button class="btn btn-danger my-cart-btn my-cart-b" data-id="8" data-name="Nuts" data-summary="summary 8" data-price="3.50" data-quantity="1" data-image="images/of7.png">加入购物车</button>
-												</div>
-											</div>
-										</div>
-									</div>
-									<div class="clearfix"></div>
-								</div>
-							</div>
-							<div class="tab-pane  text-style" id="tab3">
-								<div class=" con-w3l">
-									<div class="col-md-3 m-wthree">
-										<div class="col-m">
-											<a href="#" data-toggle="modal" data-target="#myModal9" class="offer-img">
-												<img src="images/of8.png" class="img-responsive" alt="">
-
-											</a>
-											<div class="mid-1">
-												<div class="women">
-													<h6><a href="single.html">Banana</a>(6 pcs)</h6>
-												</div>
-												<div class="mid-2">
-													<p><label>$2.00</label><em class="item_price">$1.50</em></p>
-
-												</div>
-												<div class="add">
-													<button class="btn btn-danger my-cart-btn my-cart-b" data-id="9" data-name="Banana" data-summary="summary 9" data-price="1.50" data-quantity="1" data-image="images/of8.png">加入购物车</button>
-												</div>
-											</div>
-										</div>
-									</div>
-									<div class="col-md-3 m-wthree">
-										<div class="col-m">
-											<a href="#" data-toggle="modal" data-target="#myModal10" class="offer-img">
-												<img src="images/of9.png" class="img-responsive" alt="">
-
-											</a>
-											<div class="mid-1">
-												<div class="women">
-													<h6><a href="single.html">Onion</a>(1 kg)</h6>
-												</div>
-												<div class="mid-2">
-													<p><label>$1.00</label><em class="item_price">$0.70</em></p>
-
-												</div>
-												<div class="add">
-													<button class="btn btn-danger my-cart-btn my-cart-b" data-id="10" data-name="Onion" data-summary="summary 10" data-price="0.70" data-quantity="1" data-image="images/of9.png">加入购物车</button>
-												</div>
-											</div>
-										</div>
-									</div>
-									<div class="col-md-3 m-wthree">
-										<div class="col-m">
-											<a href="#" data-toggle="modal" data-target="#myModal11" class="offer-img">
-												<img src="images/of10.png" class="img-responsive" alt="">
-
-											</a>
-											<div class="mid-1">
-												<div class="women">
-													<h6><a href="single.html"> Bitter Gourd</a>(1 kg)</h6>
-												</div>
-												<div class="mid-2">
-													<p><label>$2.00</label><em class="item_price">$1.00</em></p>
-
-												</div>
-												<div class="add">
-													<button class="btn btn-danger my-cart-btn my-cart-b" data-id="11" data-name="Bitter Gourd" data-summary="summary 11" data-price="1.00" data-quantity="1" data-image="images/of10.png">加入购物车</button>
-												</div>
-											</div>
-										</div>
-									</div>
-									<div class="col-md-3 m-wthree">
-										<div class="col-m">
-											<a href="#" data-toggle="modal" data-target="#myModal12" class="offer-img">
-												<img src="images/of11.png" class="img-responsive" alt="">
-
-											</a>
-											<div class="mid-1">
-												<div class="women">
-													<h6><a href="single.html">Apples</a>(1 kg)</h6>
-												</div>
-												<div class="mid-2">
-													<p><label>$4.00</label><em class="item_price">$3.50</em></p>
-
-												</div>
-												<div class="add">
-													<button class="btn btn-danger my-cart-btn my-cart-b" data-id="12" data-name="Apples" data-summary="summary 12" data-price="3.50" data-quantity="1" data-image="images/of11.png">加入购物车</button>
-												</div>
-											</div>
-										</div>
-									</div>
-									<div class="clearfix"></div>
-								</div>
-							</div>
-							<div class="tab-pane text-style" id="tab4">
-								<div class=" con-w3l">
-									<div class="col-md-3 m-wthree">
-										<div class="col-m">
-											<a href="#" data-toggle="modal" data-target="#myModal13" class="offer-img">
-												<img src="images/of12.png" class="img-responsive" alt="">
-
-											</a>
-											<div class="mid-1">
-												<div class="women">
-													<h6><a href="single.html">Honey</a>(500 g)</h6>
-												</div>
-												<div class="mid-2">
-													<p><label>$7.00</label><em class="item_price">$6.00</em></p>
-
-												</div>
-												<div class="add">
-													<button class="btn btn-danger my-cart-btn my-cart-b" data-id="13" data-name="Honey" data-summary="summary 13" data-price="6.00" data-quantity="1" data-image="images/of12.png">加入购物车</button>
-												</div>
-											</div>
-										</div>
-									</div>
-									<div class="col-md-3 m-wthree">
-										<div class="col-m ">
-											<a href="#" data-toggle="modal" data-target="#myModal14" class="offer-img">
-												<img src="images/of13.png" class="img-responsive" alt="">
-
-											</a>
-											<div class="mid-1">
-												<div class="women">
-													<h6><a href="single.html">Chocos</a>(250 g)</h6>
-												</div>
-												<div class="mid-2">
-													<p><label>$5.00</label><em class="item_price">$4.50</em></p>
-
-												</div>
-												<div class="add">
-													<button class="btn btn-danger my-cart-btn my-cart-b" data-id="14" data-name="Chocos" data-summary="summary 14" data-price="4.50" data-quantity="1" data-image="images/of13.png">加入购物车</button>
-												</div>
-											</div>
-										</div>
-									</div>
-									<div class="col-md-3 m-wthree">
-										<div class="col-m ">
-											<a href="#" data-toggle="modal" data-target="#myModal15" class="offer-img">
-												<img src="images/of14.png" class="img-responsive" alt="">
-
-											</a>
-											<div class="mid-1">
-												<div class="women">
-													<h6><a href="single.html">Oats</a>(1 kg)</h6>
-												</div>
-												<div class="mid-2">
-													<p><label>$4.00</label><em class="item_price">$3.50</em></p>
-
-												</div>
-												<div class="add">
-													<button class="btn btn-danger my-cart-btn my-cart-b" data-id="15" data-name="Oats" data-summary="summary 15" data-price="3.50" data-quantity="1" data-image="images/of14.png">加入购物车</button>
-												</div>
-											</div>
-										</div>
-									</div>
-									<div class="col-md-3 m-wthree">
-										<div class="col-m">
-											<a href="#" data-toggle="modal" data-target="#myModal16" class="offer-img">
-												<img src="images/of15.png" class="img-responsive" alt="">
-
-											</a>
-											<div class="mid-1">
-												<div class="women">
-													<h6><a href="single.html">Bread</a>(500 g)</h6>
-												</div>
-												<div class="mid-2">
-													<p><label>$1.00</label><em class="item_price">$0.80</em></p>
-
-												</div>
-												<div class="add">
-													<button class="btn btn-danger my-cart-btn my-cart-b" data-id="16" data-name="Bread" data-summary="summary 16" data-price="0.80" data-quantity="1" data-image="images/of15.png">加入购物车</button>
+													<button class="btn btn-danger" onclick="{location.href='product_info.html'}">查看详情</button>
 												</div>
 											</div>
 										</div>
@@ -654,57 +502,10 @@
 					</div>
 				</div>
 
-				<div class="sale">
-					<div class="col-md-4 m-w3ls">
-						<div class="col-md1 ">
-							<a href="kitchen.html">
-								<img src="images/co1.jpg" class="img-responsive img" alt="">
-								<div class="big-sa">
-									<h6>新品</h6>
-									<h3>香<span>&nbsp;料 </span></h3>
-									<p>There are many variations of passages of Lorem Ipsum available, but the majority </p>
-								</div>
-							</a>
-						</div>
-					</div>
-					<div class="col-md-4 m-w3ls1">
-						<div class="col-md ">
-							<a href="hold.html">
-								<img src="images/co.jpg" class="img-responsive img" alt="">
-								<div class="big-sale">
-									<div class="big-sale1">
-										<h3>大 <span>降價</span></h3>
-										<p>It is a long established fact that a reader </p>
-									</div>
-								</div>
-							</a>
-						</div>
-					</div>
-					<div class="col-md-4 m-w3ls">
-						<div class="col-md2 ">
-							<a href="kitchen.html">
-								<img src="images/co2.jpg" class="img-responsive img1" alt="">
-								<div class="big-sale2">
-									<h3>食用 <span>油</span></h3>
-									<p>It is a long established fact that a reader </p>
-								</div>
-							</a>
-						</div>
-						<div class="col-md3 ">
-							<a href="hold.html">
-								<img src="images/co3.jpg" class="img-responsive img1" alt="">
-								<div class="big-sale3">
-									<h3>綠色<span>蔬菜</span></h3>
-									<p>It is a long established fact that a reader </p>
-								</div>
-							</a>
-						</div>
-					</div>
-					<div class="clearfix"></div>
-				</div>
 			</div>
 		</div>
 
+		<!--footer-->
 		<div class="footer">
 			<div class="area">
 				<div class="col-md-3 footer-grid">
@@ -835,36 +636,5 @@
 		});
 	</script>
 	<a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
-
-	<div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-		<div class="modal-dialog" role="document">
-			<div class="modal-content modal-info">
-				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-				</div>
-				<div class="modal-body modal-spa">
-					<div class="col-md-5 span-2">
-						<div class="item">
-							<img src="images/of.png" class="img-responsive" alt="">
-						</div>
-					</div>
-					<div class="col-md-7 span-1 ">
-						<h3>Moong(1 kg)</h3>
-						<p class="info-product"> Aashirvaad Atta with Multigrains是由来自印度各地的谷物精选而成，让您在美味的旋转中享受多种谷物的健康美味。</p>
-						<div class="price_single">
-							<span class="reducedfrom"><del>$2.00</del> $1.50</span>
-							<div class="clearfix"></div>
-						</div>
-						<h4 class="quick">快速了解:</h4>
-						<p class="quick_desc"> Aashirvaad Atta with Multigrains为您提供六种不同谷物的健康美味：小麦，大豆，channa，燕麦，玉米和洋车前子壳。这些成分为您的饮食注入蛋白质，维生素，矿物质和纤维。所以你和你的家人每天都保持积极，健康和精力充沛。</p>
-						<div class="add">
-							<button class="btn btn-danger my-cart-btn my-cart-btn1 " >加入购物车</button>
-						</div>
-					</div>
-					<div class="clearfix"> </div>
-				</div>
-			</div>
-		</div>
-	</div>
 
 </html>
