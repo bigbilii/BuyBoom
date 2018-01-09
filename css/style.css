@@ -169,10 +169,25 @@ ul {
 
 .header-nav button {
 	background: #FAB005;
+	border: none;
 }
 
 .header-nav button:hover {
 	background: #039445;
+}
+
+.header-nav li:hover {
+	background: #039445;
+}
+.navbar-right li:hover {
+	background: #FFFFFF;
+}
+.navbar-right li {
+	height: 50px;
+}
+
+.navbar-nav {
+	height: 50px;
 }
 
 
@@ -295,6 +310,12 @@ p.hint {
 	background: url("../images/arr.png") no-repeat 0px 0px;
 }
 
+/*分页*/
+
+.page-nav{
+	margin: 0 auto;
+	width: 233px;
+}
 
 /*banner*/
 
@@ -373,6 +394,10 @@ p.hint {
 
 
 /*内容*/
+
+.content {
+	margin-top: 40px;
+}
 
 .top {
 	margin: 20px 0 0 0;
@@ -747,5 +772,16 @@ ul.nav.tabs {
 .form1 input[type="submit"] {
 	margin-bottom: 0;
 }
-/*login*/
 
+
+/*all*/
+
+.all {
+	padding-top: 3em;
+	text-align: center;
+}
+
+.product {
+	
+	margin-bottom: 2em;
+}
