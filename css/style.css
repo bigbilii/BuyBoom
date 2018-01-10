@@ -966,6 +966,8 @@ p.info-product {
 
 .close {
 	font-size: 31px;
+	width: 32px;
+	height: 32px;
 }
 
 .span-1 h3 {
@@ -1056,12 +1058,12 @@ a.at-in {
 	margin-left: 15%;
 }
 
-.sed {
+.check-out .sed {
 	float: right;
 	width: 60%;
 }
 
-.sed h5 {
+.check-out .sed h5 {
 	color: #FAB005;
 	font-size: 1.2em;
 	margin-top: 3em;
@@ -1072,11 +1074,14 @@ a.at-in {
 	width: 45%;
 }
 
-.close {
+.check-out .close {
 	cursor: pointer;
+	position: absolute;
+	left: 3%;
+	top: 52px;
 }
 
-.close i {
+.check-out .close i {
 	color: #FFFFFF;
 	font-size: 12px;
 	width: 32px;
@@ -1084,7 +1089,7 @@ a.at-in {
 	border-radius: 100px;
 	text-align: center;
 	line-height: 2.7em;
-	background: red;
+	background: #EA0612;
 }
 
 
@@ -1220,14 +1225,12 @@ a.at-in {
 	margin: 2em 1em 0 0;
 }
 
-
-
-
 .order .radio input {
 	/*display: none;*/
 }
+
 .order .radio,
-.order .radio.active{
+.order .radio.active {
 	float: left;
 	min-width: 150px;
 	/*width: 180px;*/
@@ -1246,36 +1249,44 @@ a.at-in {
 	font-size: 12px;
 }
 
+.info-order table.table,
 .order table.table {
 	border: none!important;
 }
 
+info-order td.t-data,
 .order td.t-data {
 	border: none!important;
 }
 
+.info-order th.t-head,
 .order th.t-head {
 	border: none !important;
 }
-
+.info-order a.at-in,
 .order a.at-in {
 	margin-left: 0;
 }
 
+.info-order .value,
 .order .value {
 	border: none;
 	background-color: #FFFFFF !important;
 }
+
+.info-order .pn,
 .order .pn,
 .check-out .pn {
 	color: #FAB005;
 }
+
 
 /*success*/
 
 .success {
 	padding: 3em 0;
 }
+
 .order-info {
 	text-align: center;
 }
@@ -1284,6 +1295,7 @@ a.at-in {
 	font-size: 2em;
 	color: red;
 }
+
 .order-info .info {
 	width: 500px;
 	padding: 2em 6em;
@@ -1292,11 +1304,117 @@ a.at-in {
 	text-align: left;
 	margin-bottom: 3em;
 }
+
 .order-info .info p {
 	margin-top: 1em;
 }
+
 .order-info .info span {
 	display: inline-block;
 	width: 150px;
 }
 
+
+/*userinfo*/
+.user-password,
+.user-info {
+	padding: 1em 0;
+}
+
+.user-info .header {
+	position: relative;
+	padding: 2em 2em 0 2em;
+	border: 1px solid #B2B2B2;
+}
+
+.user-info .user-img {
+	position: relative;
+	top: -50px;
+	float: left;
+	padding: 3px;
+	background: #B2B2B2;
+	border-radius: 4px;
+}
+
+.user-info .user-text {
+	float: left;
+	margin-left: 2em;
+	padding: 0 1em;
+	text-align: left;
+	width: 240px;
+}
+
+.user-info .user-text ul {
+	margin-top: 10px;
+	font-size: 14px;
+	line-height: 20px;
+}
+
+.user-info .user-text ul li {
+	height: 20px;
+	margin-bottom: 10px;
+	font-size: 14px;
+	line-height: 20px;
+}
+
+.user-text i {
+	width: 30px;
+}
+
+.user-text ul.abc li {
+	display: inline-block;
+	border-right: 1px solid #B2B2B2;
+	padding-right: 5px;
+}
+
+.user-text ul.abc li:first-child,
+.user-text ul.abc li:last-child {
+	display: inline-block;
+	border-right: none;
+	padding-right: 0;
+}
+
+.editinfo {
+	margin: 5em 0 1em 2em;
+	float: right;
+}
+
+.user-info h3 {
+	font-size: 26px;
+	font-weight: 600;
+	font-synthesis: style;
+	line-height: 30px;
+}
+
+.user-info .table {
+	margin-top: 3em;
+}
+
+.user-info .ring-in {
+	width: 30%;
+}
+
+.user-info .ring-in ul li {
+	display: inline-block;
+	width: 100px;
+	height: 30px;
+	text-align: center;
+	color: #FAB005;
+	font-size: 1.2em;
+	line-height: 30px;
+}
+
+.user-info .ring-in ul li h5{
+	color: #FAB005;
+	font-size: 1.2em;
+}
+
+.user-info .order-ct ul li {
+	margin-bottom: 1em;
+}
+
+.user-info .order-ct ul li span{
+	display: block;
+	cursor: pointer;
+	color: #337ab7;
+}

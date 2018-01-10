@@ -35,6 +35,22 @@ function confirmEmail(email) {
 	}
 }
 
+function confirmOldPassword(password) {
+	var key = document.getElementById("oldpassword");
+	if((password).length == 3) {
+		if(password != "123") {
+			key.style.border = '1.5px solid red';
+			return false;
+		} else {
+			key.style.border = '1.5px solid green';
+			return true;
+		}
+	} else {
+		key.style.border = '1.5px solid red';
+		return false;
+	}
+}
+
 function confirmPassword(password) {
 	var key = document.getElementById("password");
 
@@ -84,6 +100,11 @@ function editEmail() {
 	key.style.border = '1px solid #333333';
 }
 
+function editOldPassword() {
+	var key = document.getElementById("oldpassword");
+	key.style.border = '1px solid #333333';
+}
+
 function editPassword() {
 	var key = document.getElementById("password");
 	key.style.border = '1px solid #333333';
@@ -110,11 +131,11 @@ function checkLogin() {
 	if(email == "abc@qq.com") {
 		if(password == "123") {
 			alert("登录成功!");
+			document.getElementById("ig").action="index.html";
 			return true;
 		}
 	}
 	alert("账号密码错误，登录失败!");
-	return false;
 }
 
 function checkRegister() {
@@ -141,4 +162,27 @@ function checkRegister() {
 		return false;
 	}
 	alert("注册成功!");
+	document.getElementById("rg").action="index.html";
 }
+
+function checkPasswordChange() {
+	var oldpassword = document.getElementById("oldpassword-value").value;
+	var password = document.getElementById("password-value").value;
+	var conpassword = document.getElementById("conpassword-value").value;
+	
+	
+	if(!confirmOldPassword(oldpassword) ) {
+		alert("原密码错误!");
+		return false;
+	}
+	if(!confirmPassword(password)) {
+		alert("新密码格式不正确! 3-20位");
+		return false;
+	}
+	if(!confirmConPassword(conpassword)) {
+		alert("两次密码输入不匹配!");
+		return false;
+	}
+	alert("修改成功!");
+}
+
