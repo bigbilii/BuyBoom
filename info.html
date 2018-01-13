@@ -15,6 +15,7 @@
 		<script src="js/move-top.js" type="text/javascript" charset="utf-8"></script>
 		<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 		<script src="js/infoCheck.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="css/city-picker.css" />
 	</head>
 
 	<body>
@@ -249,7 +250,6 @@
 						</div>
 					</nav>
 				</div>
-
 			</div>
 		</div>
 
@@ -341,7 +341,7 @@
 											</li>
 										</ul>
 
-										<div class="clearfix"> </div>
+									<div class="clearfix"> </div>
 
 									</td>
 									<td class="t-data ">$<span class="price">45.50</span></td>
@@ -421,7 +421,20 @@
 
 							</table>
 						</div>
-						<div role="tabpanel" class="tab-pane fade" id="address">...</div>
+
+						<div role="tabpanel" class="tab-pane fade" id="address">
+							<div class="add-info">
+								<p><span>收件人:</span> <span>阿比</span></p>
+								<p><span>联系电话:</span> <span>132432543</span></p>
+								<p><span>地区:</span> <span>重庆市 重庆市 沙坪坝区</span></p>
+								<p><span>详细地址:</span> <span>歌乐山</span></p>
+								<button class="btn btn-primary delete-add-info" >删除</button>
+							</div>
+							<div class="add-info add-button">
+								<button class="btn btn-danger" data-toggle="modal" data-target="#addresspanel">添加</button>
+							</div>
+							<div class="clearfix"> </div>
+						</div>
 						<div role="tabpanel" class="tab-pane fade" id="messages">...</div>
 						<div role="tabpanel" class="tab-pane fade user-password" id="changepw">
 							<form>
@@ -447,7 +460,7 @@
 				</div>
 			</div>
 
-			<!-- Modal -->
+			<!-- Modal info -->
 			<div class="modal fade" id="infopanel" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
 				<div class="modal-dialog" role="document">
 					<div class="modal-content">
@@ -492,11 +505,126 @@
 					</div>
 				</div>
 			</div>
+			<!-- Modal address-->
+			<div class="modal fade" id="addresspanel" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+				<div class="modal-dialog" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+							<h4 class="modal-title" id="myModalLabel">收获地址</h4>
+						</div>
+						<div class="modal-body">
+							<form>
+								<div class="form-group">
+									<label for="exampleInputPassword1">收件人</label>
+									<input type="name" class="form-control address-name" placeholder="姓名">
+								</div>
+								<div class="form-group">
+									<label for="exampleInputPassword1">电话</label>
+									<input type="phone" class="form-control address-phone" placeholder="电话">
+								</div>
+								<div class="form-group">
+									<label for="exampleInputPassword1">地址</label>
+									<div class="city-picker-selector" id="city-picker-selector">
+										<div class="selector-item storey province">
+											<a href="javascript:;" class="selector-name reveal">北京市</a>
+											<input type="hidden" name="userProvinceId" class="input-price val-error" value="110000" data-required="userProvinceId">
+											<div class="selector-list listing hide">
+												<ul>
+													<li>北京市</li>
+													<li>天津市</li>
+													<li>河北省</li>
+													<li>山西省</li>
+												</ul>
+											</div>
+										</div>
+										<div class="selector-item storey city">
+											<a href="javascript:;" class="selector-name reveal">北京市</a>
+											<input type="hidden" name="userCityId" class="input-price val-error" value="110100" data-required="userCityId">
+											<div class="selector-list listing hide">
+												<ul>
+													<li>北京市</li>
+												</ul>
+											</div>
+										</div>
+										<div class="selector-item storey district">
+											<a href="javascript:;" class="selector-name reveal">海淀区</a>
+											<input type="hidden" name="userDistrictId" class="input-price val-error" value="110108" data-required="userDistrictId">
+											<div class="selector-list listing hide">
+												<ul>
+													<li>东城区</li>
+													<li>西城区</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="exampleInputPassword1">详细地址</label>
+									<input type="a" class="form-control address-aaa" placeholder="详细地址">
+								</div>
+							</form>
+
+							<!-- end .city-picker-selector -->
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+							<button type="button" class="btn btn-primary address-add">确定添加</button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!--地址选择-->
+			<script type="text/javascript" src="js/citydata.js"></script>
+			<script type="text/javascript" src="js/cityPicker-1.0.0.js?v=1"></script>
+			<script type="text/javascript">
+				$(function() {
+
+					var selector = $('#city-picker-selector').cityPicker({
+						dataJson: cityData,
+						renderMode: true,
+						search: false,
+						linkage: false
+					})
+					$('#city-picker-selector').on('choose-province.citypicker', function(event, tagert, storage) {
+						console.log(storage);
+					});
+
+					//设置城市
+					selector.setCityVal([{
+						'id': '110000',
+						'name': '北京市'
+					}, {
+						'id': '110100',
+						'name': '北京市'
+					}, {
+						'id': '110108',
+						'name': '海淀区'
+					}]);
+
+					//设置城市
+					select.setCityVal([{
+						'id': '140000',
+						'name': '山西省'
+					}, {
+						'id': '140100',
+						'name': '太原市'
+					}, {
+						'id': '140105',
+						'name': '小店区'
+					}]);
+				});
+			</script>
 
 			<!--jq-->
 			<script>
 				$('.delete').on('click', function() {
 					var div = $(this).parent().parent().parent().parent();
+					div.remove();
+				});
+				$('#address').on('click','.delete-add-info', function() {
+					var div = $(this).parent();
 					div.remove();
 				});
 
@@ -505,7 +633,7 @@
 					var nbr = $('.new-user-birth');
 					var nsc = $('.new-user-school');
 					var nma = $('.new-user-major');
-					
+
 					var sex = $('input:radio[name="sex"]:checked');
 
 					if(nad.val().length > 0) {
@@ -524,8 +652,8 @@
 					if(sex.val() != null) {
 						var i = $('.user-sex').find("i");
 						i.remove();
-						var txt; 
-						if (sex.val() == "woman") {
+						var txt;
+						if(sex.val() == "woman") {
 							txt = "<i class='fa fa-venus' aria-hidden='true'></i>";
 						} else {
 							txt = "<i class='fa fa-mars' aria-hidden='true'></i>";
@@ -541,6 +669,53 @@
 					$('input:radio[name="sex"]').eq(0).removeProp('checked');
 					$('input:radio[name="sex"]').eq(1).removeProp('checked');
 					$('#infopanel').modal('hide');
+
+				});
+
+				$('.address-add').on('click', function() {
+					var name = $('.address-name');
+					var phone = $('.address-phone');
+					var aaa = $('.address-aaa');
+					var province = $('.province').find("a").text();
+					var city = $('.city').find("a").text();
+					var district = $('.district').find("a").text();
+					var node = $('.add-button');
+
+					if(name.val().length <= 0) {
+						alert("姓名不能为空");
+						return false;
+					}
+
+					if(phone.val().length <= 0) {
+						alert("电话不能为空");
+						return false;
+					}
+
+					if(aaa.val().length <= 0) {
+						alert("详细地址不能为空");
+						return false;
+					}
+					
+					if(city == "请选择城市") {
+						alert("请选择城市");
+						return false;
+					}
+					
+					if(district == "请选择区县") {
+						alert("请选择区县");
+						return false;
+					}
+					
+					
+					var txt = province+" "+city+" "+district;
+					node.before("<div class='add-info'><p><span>收件人:</span> <span>"+name.val()+"</span></p><p><span>联系电话:</span> <span>"+phone.val()+"</span></p><p><span>地区:</span><span>"+txt+"</span></p><p><span>详细地址:</span> <span>"+aaa.val()+"</span></p><button class='btn btn-primary delete-add-info' >删除</button>	</div>");
+
+
+					alert("保存成功");
+					name.val("");
+					phone.val("");
+					aaa.val("");
+					$('#addresspanel').modal('hide');
 
 				});
 			</script>
@@ -667,6 +842,7 @@
 
 				</div>
 			</div>
+
 	</body>
 
 	<script type="text/javascript">

@@ -1418,3 +1418,21 @@ info-order td.t-data,
 	cursor: pointer;
 	color: #337ab7;
 }
+
+.add-info {
+	float: left;
+	height: 250px;
+	margin: 3em;
+	padding: 3em 3em 2em 3em;
+	min-width: 400px;
+	border: 1px solid #B2B2B2;	
+}
+
+
+.add-info p {
+	margin-bottom: 1em;
+}
+.add-info  span {
+	width: 200px;
+	display: inline-block;
+}
